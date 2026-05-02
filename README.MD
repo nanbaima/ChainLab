@@ -3,6 +3,18 @@ DLTs promise to revolutionize business ecosystems by permitting secure transacti
 
 In this repository, we present the Distributed Ledger Performance Scan (DLPS), a comprehensive framework for performance characterizations and benchmarking of blockchains, addressing the need to evaluate highly customizable workloads and configurations
 
+## Workspace Summary
+
+ChainLab is the benchmarking layer of the local blockchain research stack:
+
+- `src/run.py` starts benchmark runs from JSON configuration files.
+- `src/Experiment_Handler.py` coordinates experiment setup and execution.
+- `src/benchmarking/` contains benchmark and crashmarking helpers.
+- `src/evaluation/` contains result conversion and refresh utilities.
+- `src/example_configs/` contains example blockchain benchmark configurations.
+
+The project expects BlockchainFormation and DAppFormation to provide network and client setup. The included `requirements.txt` reflects an old Ubuntu-oriented environment and includes system packages that do not install cleanly into a normal macOS `.venv`. Use a matching Linux environment or a carefully isolated virtual machine/container when reviving full benchmark runs.
+
 ## Paper 
 The according paper describing the architecture and the functionality of the framework can be found here:
 https://scholarspace.manoa.hawaii.edu/handle/10125/71443
